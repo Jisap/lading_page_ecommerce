@@ -47,3 +47,10 @@ $dropdownToggler.addEventListener('click', function () {
 $cartToggler.addEventListener('click', function () {
   toggleElem($cartModal);
 });
+
+// header active when windows scrollY 50px
+const activeHeader = function () {
+  window.scrollY > 50 ? $header.classList.add('active') : $header.classList.remove('active');
+}
+
+window.addEventListener('scroll', activeHeader);
