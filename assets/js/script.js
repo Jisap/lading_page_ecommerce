@@ -41,3 +41,9 @@ const toggleElem = function (elem) {
 $dropdownToggler.addEventListener('click', function () {
   toggleElem($dropdown);
 });
+
+// TOOGLE CART
+
+$cartToggler.addEventListener('click', function () {
+  toggleElem($cartModal);
+});
