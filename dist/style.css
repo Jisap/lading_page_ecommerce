@@ -794,6 +794,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body.active {
+  overflow: hidden;
+}
+
 /*-------------------------*\
   #REUSED STYLE
 \*-------------------------*/
