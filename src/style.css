@@ -43,3 +43,15 @@ ion-icon {
   /* responsive for sm:635px screen */
   sm:ms-0;
 }
+
+/*-------------------------*\
+  #COMPONENTS
+\*-------------------------*/
+
+/**
+ * Dropdown
+ */
+
+.dropdown {
+  @apply relative;
+}

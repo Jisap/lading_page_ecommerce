@@ -55,7 +55,138 @@
             close
           </span>
         </button>
+
+        <ul class="navbar-list">
+          <li>
+            <a href="#home" class="nav-link">Home</a>
+          </li>
+
+          <li>
+            <button class="navbar-link">
+              Shop
+              <ion-icon 
+                name="caret-forward-outline" 
+                aria-hidden="true" 
+                class="duration-200">
+              </ion-icon>
+            </button>
+
+            <div class="dropdown" data-dropdown>
+              <div class="dropdown-content">
+                <a href="#" class="pt-2">All Products</a>
+                <a href="#" class="">Clothing</a>
+                <a href="#" class="">Candles</a>
+                <a href="#" class="">Accessories</a>
+                <a href="#" class="">Bags</a>
+                <a href="#" class="">Clocks</a>
+                <a href="#" class="pb-2">SALE 🏷️</a>
+              </div>
+            </div>
+          </li>
+        
+          <li>
+            <a href="#blog" class="navbar-link">Blog</a>
+          </li>
+          
+          <li>
+            <a href="#latest" class="navbar-link">Latest</a>
+          </li>
+          
+          <li>
+            <a href="#info" class="navbar-link">Info</a>
+          </li>
+        </ul>
       </nav>
+
+      <div class="rounded-md overflow-hidden flex items-center gap-3 lg:fixed lg:top-5 lg:right-5">
+        <button class="cart-toggler" aria-label="cart toggler" data-cart-toggler>
+          <span class="material-symbols-rounded text-papaya_whip" aria-hidden="true">
+            shopping_cart_checkout
+          </span>
+        </button>
+
+        <div class="">
+          <div class="cart-modal" data-cart-modal>
+            <ul>
+              <li class="">
+                <figure class="img-holder">
+                  <img 
+                    src="./assets/images/cart-1.jpg" 
+                    width="80" 
+                    height="80" 
+                    loading="lazy" 
+                    alt="Handmade painted coffee mug"
+                    class="img-cover"
+                  >
+                </figure>
+
+                <div class="text-wrapper">
+                  <span class="">
+                    Handmade painted coffe mug
+                  </span>
+
+                  <div class="">
+                    <p class="product-ammount">1 x</p>
+                    <p class="price">$85.00</p>
+                  </div>
+
+                  <button class="" aria-label="remove product">
+                    <span class="material-symbols-rounded" aria-hidden="true">
+                      close
+                    </span>
+                  </button>
+                </div>
+              </li>
+
+              <div class="divider"></div>
+
+              <li class="">
+                <figure class="img-holder">
+                  <img src="./assets/images/cart-1.jpg" width="80" height="80" loading="lazy" alt="Handmade painted coffee mug"
+                    class="img-cover">
+                </figure>
+              
+                <div class="text-wrapper">
+                  <span class="">
+                    Handmade painted coffe mug
+                  </span>
+              
+                  <div class="">
+                    <p class="product-ammount">1 x</p>
+                    <p class="price">$85.00</p>
+                  </div>
+              
+                  <button class="" aria-label="remove product">
+                    <span class="material-symbols-rounded" aria-hidden="true">
+                      close
+                    </span>
+                  </button>
+                </div>
+              </li>
+
+              <div class="divider"></div>
+
+              <div class="">
+                <a href="" class="btn" aria-label="checkout">
+                  checkout
+                </a>
+
+                <a href="#" class="btn btn-text" aria-label="view-cart">
+                  view cart
+                </a>
+              </div>
+            </ul>
+          </div>
+        </div>
+
+        <button class="h-10 w-10 grid place-items-center md:hidden" aria-label="toggle menu" data-nav-toggler>
+          <span class="material-symbols-rounded text-papaya_whip" aria-hidden="true">
+            menu
+          </span>
+        </button>
+      </div>
+
+      <div class="overlay" data-overlay data-nav-toggler></div>
     </div>
   </header>
   
