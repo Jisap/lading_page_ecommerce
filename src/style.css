@@ -70,6 +70,7 @@ ion-icon {
   clip-path: inset(0 0 100% 0);
 }
 
+/* Hace visible el contenido de dropdown cuando está activo */
 .dropdown.active .dropdown-content {
   @apply visible h-[184px]
   /* responsive for xxl:1600 screen */
@@ -195,6 +196,7 @@ ion-icon {
   lg:bg-transparent;
 }
 
+/* header active when windows scrollY 50px */
 .header.active {
   @apply shadow-shadowDark animate-fadeInDown
   /* responsive for lg:1200px screen */
@@ -224,6 +226,7 @@ nav y botones */
   }
 }
 
+/* Cuando esta active nav para moviles se muestra */
 .navbar.active {
   @apply visible translate-x-0;
 }
@@ -248,6 +251,7 @@ nav y botones */
  * cart
  */
 
+ /* El boton del carrito tiene posicion fija en la parte superior derecha de la página */
 .cart-toggler {
   @apply relative grid h-10 w-10 place-items-center rounded-full
   /* ::before */
@@ -256,6 +260,7 @@ nav y botones */
   lg:bg-caf_noir;
 }
 
+/* cart-modal es el contenido del carrito y en principio es invisible */
 .cart-modal {
   @apply fixed top-24 right-2 max-w-72 rounded-lg px-2 py-3 z-20 shadow-[0_-4px_0_#dd9d4cff] origin-top duration-75 ease-inExpo invisible opacity-0
   /* responsive for sm:635px screen */
@@ -263,6 +268,7 @@ nav y botones */
   background: linear-gradient(359deg, #fde6b9, #fff3dcff);
 }
 
+/* Cuando se hace click en el botón de cart se añade la clase active a cartModal -> se hace visible el contenido de cart */
 .cart-modal.active {
   @apply translate-y-0.5 visible opacity-100;
 }

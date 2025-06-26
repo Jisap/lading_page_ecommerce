@@ -38,13 +38,13 @@ const toggleElem = function (elem) {
   elem.classList.toggle('active');
 }
 
-$dropdownToggler.addEventListener('click', function () {
+$dropdownToggler.addEventListener('click', function () { // Cuando se hace click en el botón de dropdown se añade la clase active -> se hace visible el contenido de dropdown
   toggleElem($dropdown);
 });
 
 // TOOGLE CART
 
-$cartToggler.addEventListener('click', function () {
+$cartToggler.addEventListener('click', function () {     // Cuando se hace click en el botón de cart se añade la clase active a cartModal -> se hace visible el contenido de cart
   toggleElem($cartModal);
 });
 

@@ -604,6 +604,10 @@ video {
   position: relative;
 }
 
+.z-10 {
+  z-index: 10;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -616,6 +620,18 @@ video {
 
 .mb-auto {
   margin-bottom: auto;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
+.mt-52 {
+  margin-top: 13rem;
 }
 
 .block {
@@ -734,6 +750,11 @@ video {
   padding-bottom: 1.25rem;
 }
 
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
 .pb-2 {
   padding-bottom: 0.5rem;
 }
@@ -746,8 +767,20 @@ video {
   padding-top: 0.5rem;
 }
 
+.pb-10 {
+  padding-bottom: 2.5rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
 .font-secondary {
   font-family: "Montserrat", sans-serif;
+}
+
+.font-primary {
+  font-family: "Cormorant Garamond", serif;
 }
 
 .text-\[13px\] {
@@ -759,8 +792,17 @@ video {
   line-height: 1.25rem;
 }
 
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
+}
+
 .font-bold {
   font-weight: 700;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
 
 .text-caf_noir {
@@ -773,6 +815,11 @@ video {
 
 .text-papaya_whip {
   color: #fff3dcff;
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
 .duration-200 {
@@ -905,6 +952,8 @@ ion-icon {
 .dropdown-content {
   clip-path: inset(0 0 100% 0);
 }
+
+/* Hace visible el contenido de dropdown cuando está activo */
 
 .dropdown.active .dropdown-content {
   visibility: visible;
@@ -1111,6 +1160,8 @@ ion-icon {
   }
 }
 
+/* header active when windows scrollY 50px */
+
 @keyframes fadeInDown {
   0% {
     transform: translateY(-100%);
@@ -1195,6 +1246,8 @@ nav y botones */
   }
 }
 
+/* Cuando esta active nav para moviles se muestra */
+
 .navbar.active {
   visibility: visible;
   --tw-translate-x: 0px;
@@ -1259,6 +1312,8 @@ nav y botones */
  * cart
  */
 
+/* El boton del carrito tiene posicion fija en la parte superior derecha de la página */
+
 .cart-toggler {
   position: relative;
   display: grid;
@@ -1292,6 +1347,8 @@ nav y botones */
   }
 }
 
+/* cart-modal es el contenido del carrito y en principio es invisible */
+
 .cart-modal {
   visibility: hidden;
   position: fixed;
@@ -1322,6 +1379,8 @@ nav y botones */
 .cart-modal {
   background: linear-gradient(359deg, #fde6b9, #fff3dcff);
 }
+
+/* Cuando se hace click en el botón de cart se añade la clase active a cartModal -> se hace visible el contenido de cart */
 
 .cart-modal.active {
   visibility: visible;
@@ -1483,7 +1542,23 @@ nav y botones */
   }
 }
 
+@media (min-width: 635px) {
+  .sm\:px-7 {
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+  }
+
+  .sm\:text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+}
+
 @media (min-width: 1000px) {
+  .md\:mt-10 {
+    margin-top: 2.5rem;
+  }
+
   .md\:flex {
     display: flex;
   }
@@ -1499,6 +1574,21 @@ nav y botones */
   .md\:gap-3 {
     gap: 0.75rem;
   }
+
+  .md\:py-16 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .md\:text-8xl {
+    font-size: 6rem;
+    line-height: 1;
+  }
+
+  .md\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -1513,6 +1603,19 @@ nav y botones */
   .lg\:top-5 {
     top: 1.25rem;
   }
+
+  .lg\:mx-0 {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .lg\:text-start {
+    text-align: start;
+  }
+
+  .lg\:text-\[85px\] {
+    font-size: 85px;
+  }
 }
 
 @media (min-width: 1400px) {
@@ -1524,5 +1627,15 @@ nav y botones */
 @media (min-width: 1600px) {
   .xxl\:w-40 {
     width: 10rem;
+  }
+
+  .xxl\:text-8xl {
+    font-size: 6rem;
+    line-height: 1;
+  }
+
+  .xxl\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
