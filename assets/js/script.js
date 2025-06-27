@@ -54,3 +54,57 @@ const activeHeader = function () {
 }
 
 window.addEventListener('scroll', activeHeader);
+
+
+// Custom slider
+
+const $sliderContainers = document.querySelectorAll('[data-slider-container]'); // div ppal
+
+function sliderInitial($sliderContainer) { // elementos del slider
+  const $slider = $sliderContainer.querySelector('[data-slider]');    // UL
+  const $prevBtn = $sliderContainer.querySelector('[data-prev-btn]'); // botón prev
+  const $nextBtn = $sliderContainer.querySelector('[data-next-btn]'); // botón next
+  
+  function nextSlide() {
+    $slider.appendChild($slider.firstElementChild); // Mueve el último item del slider a la derecha. El css se encarga de la animación visual
+  }
+  $nextBtn.addEventListener('click', nextSlide);    // Se añaden eventListeners a los botones de slider
+
+  function prevSlide() {
+    $slider.prepend($slider.lastElementChild);      // Mueve el primer item del slider a la izquierda
+  }
+  $prevBtn.addEventListener('click', prevSlide);
+
+  let autoSlideIntervalId;
+
+  function autoSlide() {
+    autoSlideIntervalId = setInterval(function () {
+      nextSlide();
+    }, 2000);
+  }
+
+  autoSlide();
+
+  function deleteAutoSliding() {
+    clearInterval(autoSlideIntervalId);
+  }
+
+  // Stop auto sliding when mouseover
+  $slider.addEventListener('mouseover', deleteAutoSliding);
+  $prevBtn.addEventListener('mouseover', deleteAutoSliding);
+  $nextBtn.addEventListener('mouseover', deleteAutoSliding);
+
+  // Resume auto sliding when mouseout
+  $slider.addEventListener('mouseout', autoSlide);
+  $prevBtn.addEventListener('mouseout', autoSlide);
+  $nextBtn.addEventListener('mouseout', autoSlide);
+
+}
+
+// for (let i = 0; i < $sliderContainers.length; i++) {
+//   sliderInitial($sliderContainers[i]);
+// }
+
+for (const slider of $sliderContainers) {          // Iteramos sobre todos los contenedores de slider y les aplicamos la lógica. 
+  sliderInitial(slider);
+}
