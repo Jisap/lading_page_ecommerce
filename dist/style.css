@@ -1803,6 +1803,10 @@ nav y botones */
 }
 
 @media (min-width: 1000px) {
+  .md\:-order-1 {
+    order: -1;
+  }
+
   .md\:mx-0 {
     margin-left: 0px;
     margin-right: 0px;
@@ -1818,6 +1822,10 @@ nav y botones */
 
   .md\:mt-10 {
     margin-top: 2.5rem;
+  }
+
+  .md\:ms-auto {
+    margin-inline-start: auto;
   }
 
   .md\:block {
