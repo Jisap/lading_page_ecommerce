@@ -122,19 +122,19 @@ ion-icon {
  */
 
 .slider {
-  @apply relative overflow-hidden;
+  @apply relative overflow-hidden; /* Oculta cualquier cosa que se salga de sus límites */
 }
 
 .slider-item {
-  @apply bg-papaya_whip absolute top-0 left-0 overflow-hidden;
+  @apply bg-papaya_whip absolute top-0 left-0 overflow-hidden; /* Saca al elemento del flujo normal */
   transition: left 0.5s cubic-bezier(0.645, 0.045, 0.354, 1);
 }
 
 .slider-item:nth-child(1) {
-  @apply left-[calc(-260px_+_-20px)];
+  @apply left-[calc(-260px_+_-20px)]; /* Mueve el PRIMER item -280px a la izquierda */
 }
 
-.slider-item:nth-child(2) {
+.slider-item:nth-child(2) { /* Posiciona el SEGUNDO item en el área visible */
   @apply left-0;
 }
 
