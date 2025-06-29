@@ -977,6 +977,10 @@ video {
   border-color: #1111111a;
 }
 
+.border-t-caf_noir {
+  border-top-color: #4f3120ff;
+}
+
 .bg-\[\#4f3120db\] {
   background-color: #4f3120db;
 }
